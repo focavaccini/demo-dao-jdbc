@@ -16,9 +16,16 @@ public class Program {
 		System.out.println(seller);
 		System.out.println();
 		Department dep = new Department(2, null);
-		List<Seller> list = sellerDao.fingByDepartment(dep);
+		List<Seller> list = sellerDao.findByDepartment(dep);
 		
 		for(Seller sellers : list) {
+			System.out.println(sellers);
+		}
+		
+		System.out.println("--------------------");
+		List<Seller> listAll = sellerDao.findAll();
+		
+		for(Seller sellers : listAll) {
 			System.out.println(sellers);
 		}
 	}
