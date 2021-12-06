@@ -36,5 +36,17 @@ public class Program {
 		for(Seller sellers : listAll) {
 			System.out.println(sellers);
 		}
+		
+		System.out.println("--------------------");
+		seller = sellerDao.findById(8);
+		seller.setEmail("fernando@gmail.com");
+		sellerDao.update(seller);
+		for(Seller sellers : listAll) {
+			System.out.println(sellers);
+		}
+		
+		System.out.println("--------------------");
+		int id = 8;
+		sellerDao.deleteById(id);
 	}
 }
